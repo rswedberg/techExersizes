@@ -1,12 +1,23 @@
-<!-- comment, glad you added a comment, I forgot how to do it :) -->
-<!--good deal, thanks-->
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Index Page</title>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>repl.it</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
-	  <p>hello world</p>
+    <h3>Test - User Data </h3>
+    <p>
+      This will fulfill tech exercise 3, by taking user input, modifying it, and producing an output.
+    </p>
+    <form action="/" method="post">
+      <input type="text" value="Enter a number" name="number"/>
+      <textarea rows="10" cols="30" >
+        {{ number }}
+      </textarea>
+      <button type="submit">Change</button>
+    </form>
+    <script src="script.js"></script>
   </body>
 </html>
