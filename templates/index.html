@@ -7,6 +7,9 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <form action="/retrieve" method="get">
+      <button>Retrieve</button>
+    </form>
     <h3>Nathan's page</h3>
     <p>
      HELLO WORLD!
@@ -29,7 +32,7 @@
     <form action="/" method="post">
       <input type="text" value="Welcome!" name="number"/>
       <textarea name="result" rows="10" cols="10" >
-        {{ number }}
+        {{ double }}
       </textarea>
       <button type="submit">Don't press</button>
     </form>
