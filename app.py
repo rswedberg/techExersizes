@@ -1,4 +1,3 @@
-from replit import db
 from flask import Flask, render_template, request
 from db import init_db_command
 from db_execute import Value
