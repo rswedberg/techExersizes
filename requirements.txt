@@ -6,4 +6,4 @@ Flask-Login==0.4.1
 pytest==5.2.0
 pytest-cov==2.5.1
 pytest-dependency==0.3.2
-selenium
+selenium==4.0
