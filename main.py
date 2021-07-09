@@ -1,5 +1,9 @@
+from replit import db
 from flask import Flask, render_template, request
-
+from db import init_db_command
+from db_execute import Value
+import sqlite3
+    
 # Create a flask app
 app = Flask(
   __name__,
@@ -14,8 +18,19 @@ def index():
     return render_template("index.html")
   else:
     number = int(request.form.get("number"))
-    number *= 2
-    return render_template("index.html", number=number)
+    double = number * 2
+    Value.create(number, double)
+    return render_template("index.html", double=double)
+
+# Retrieve page
+@app.route("/retrieve", methods=["GET", "POST"])
+def retrieve():
+  if request.method == "GET":
+    return render_template("retrieve.html")
+  else:
+    number = request.form.get("number")
+    double = Value.get(number)
+    return render_template("retrieve.html", double=double)
 
 if __name__ == '__main__':
   # Run the Flask app
