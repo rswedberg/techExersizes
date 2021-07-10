@@ -30,6 +30,8 @@ jobs:
     # Then run your tests!
     # CircleCI will report the results back to your VCS provider.
     steps:
+      -browser-tools/install-chrome
+      -browser-tools/install-chromedriver
       - checkout
       - python/install-packages:
           pkg-manager: pip
@@ -38,4 +40,4 @@ jobs:
       - run:
           name: Run tests
           # This assumes pytest is installed via the install-package step above
-          command: pytest
+          command: python test_basic.py
