@@ -1,5 +1,3 @@
-from flask_login import UserMixin
-
 from db import get_db
 
 class Value():
