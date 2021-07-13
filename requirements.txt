@@ -8,3 +8,4 @@ pytest-cov==2.8.1
 pytest-dependency==0.3.2
 selenium==3.141
 pytest-remotedata==0.3.2
+gunicorn==19.7.1
