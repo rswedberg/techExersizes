@@ -13,9 +13,11 @@ class Value():
   @staticmethod
   def get(value):
     db = get_db()
-    db.execute(
+    double = db.execute(
       "SELECT double FROM users WHERE value = ?", (value)
-    ).fetchone()
+    )
     if not double:
-      return None 
+      double = "Value not in database"
+    else:
+      double = double.fetchone()[0] 
     return double
